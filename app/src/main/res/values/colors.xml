@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="buttons">#080608</color>
     <color name="buttons_sup">#161514</color>
+    <color name="buttonsPressed">#2C2C2C</color>
+    <color name="buttons_sup_pressed">#404040</color>
+    <color name="buttonResult">#16456b</color>
+    <color name="buttonResultPressed">#2E82C6</color>
     <color name="background">#222120</color>
     <color name="textColorButtonSup">#787776</color>
     <color name="textColorButtons">#e7e5e7</color>

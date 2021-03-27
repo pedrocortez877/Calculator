@@ -27,7 +27,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="%" />
@@ -38,7 +38,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="CE" />
@@ -49,7 +49,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="C" />
@@ -60,7 +60,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="◄" />
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:layout_weight="1"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="1/x" />
@@ -87,7 +87,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="x²" />
@@ -98,7 +98,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="√x" />
@@ -109,7 +109,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="÷" />
@@ -126,7 +126,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="7" />
@@ -137,7 +137,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="8" />
@@ -148,7 +148,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="9" />
@@ -159,7 +159,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="x" />
@@ -176,7 +176,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="4" />
@@ -187,7 +187,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="5" />
@@ -198,7 +198,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="6" />
@@ -209,7 +209,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="-" />
@@ -226,7 +226,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="1" />
@@ -237,7 +237,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="2" />
@@ -248,7 +248,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="3" />
@@ -259,7 +259,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
+                android:background="@drawable/button_sup_color"
                 android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
                 android:text="+" />
@@ -275,7 +275,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="+/-" />
@@ -286,7 +286,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonNumbers"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="0" />
@@ -297,7 +297,7 @@
                 android:layout_height="68dp"
                 android:layout_weight="1"
                 android:onClick="onClickButtonOperation"
-                android:background="@color/buttons"
+                android:background="@drawable/button_color"
                 android:textColor="@color/textColorButtons"
                 android:layout_margin="1dp"
                 android:text="." />
@@ -306,12 +306,12 @@
                 android:id="@+id/buttonResult"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:layout_weight="1"
-                android:onClick="onClickButtonOperation"
-                android:background="@color/buttons_sup"
-                android:textColor="@color/textColorButtonSup"
                 android:layout_margin="1dp"
-                android:text="=" />
+                android:layout_weight="1"
+                android:background="@drawable/button_result_color"
+                android:onClick="onClickButtonOperation"
+                android:text="="
+                android:textColor="@color/textColorButtonSup" />
         </LinearLayout>
     </LinearLayout>
 
