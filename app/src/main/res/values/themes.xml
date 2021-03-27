@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Calculator" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/buttons_sup</item>
+        <item name="colorPrimary">@color/background</item>
         <item name="colorPrimaryVariant">@color/buttons</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,6 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:headerBackground" tools:targetApi="l">?attr/colorOnSecondary</item>
+        <item name="android:headerBackground" tools:targetApi="l">@color/background</item>
     </style>
 </resources>
