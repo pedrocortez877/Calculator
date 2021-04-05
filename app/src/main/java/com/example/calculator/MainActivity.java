@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             case "C":
             case "CE":
             case ",":
+            case "◄":
                 this.applyOperation(buttonValue);
                 break;
             case "=":
@@ -52,17 +53,24 @@ public class MainActivity extends AppCompatActivity {
     public void applyOperation(String operation){
         if(operation.equals("C") || operation.equals("CE")){
             this.clearFields();
-        }else if(operation.equals(".")){
-            if(modeResult || isOperation){
+        } else if (operation.equals("◄")) {
+            if(!isOperation && !modeResult) {
+                this.fieldResults.setText(this.fieldResults.getText().toString().substring(0, this.fieldResults.getText().length() - 1));
+                if (this.fieldResults.getText().toString().isEmpty()) {
+                    this.clearFields();
+                }
+            }
+        } else if (operation.equals(".")) {
+            if (modeResult || isOperation) {
                 this.fieldResults.setText("0");
                 modeResult = false;
             }
-            if(!fieldResults.getText().toString().contains(".")){
+            if (!fieldResults.getText().toString().contains(".")) {
                 fieldResults.append(".");
             }
             isOperation = false;
-        }else {
-            if(!modeResult && !isOperation && !fieldHistory.getText().toString().isEmpty()){
+        } else {
+            if (!modeResult && !isOperation && !fieldHistory.getText().toString().isEmpty()) {
                 this.calcResults();
             }
             this.fieldHistory.setText(this.fieldResults.getText().toString().concat(operation));
