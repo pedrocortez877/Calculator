@@ -37,10 +37,8 @@ public class MainActivity extends AppCompatActivity {
             case "÷":
             case "C":
             case "CE":
-                this.applyOperation(buttonValue);
-                break;
             case ",":
-                this.decimalNumber();
+                this.applyOperation(buttonValue);
                 break;
             case "=":
                 this.calcResults();
@@ -54,7 +52,16 @@ public class MainActivity extends AppCompatActivity {
     public void applyOperation(String operation){
         if(operation.equals("C") || operation.equals("CE")){
             this.clearFields();
-        }else{
+        }else if(operation.equals(".")){
+            if(modeResult || isOperation){
+                this.fieldResults.setText("0");
+                modeResult = false;
+            }
+            if(!fieldResults.getText().toString().contains(".")){
+                fieldResults.append(".");
+            }
+            isOperation = false;
+        }else {
             if(!modeResult && !isOperation && !fieldHistory.getText().toString().isEmpty()){
                 this.calcResults();
             }
@@ -63,36 +70,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void decimalNumber(){
-        if(modeResult || isOperation){
-            this.fieldResults.setText("0");
-            modeResult = false;
-        }
-        if(!fieldResults.getText().toString().contains(".")){
-            fieldResults.append(".");
-        }
-        isOperation = false;
-    }
-
     public void applyNumbers(String number) {
         String txtResults = this.fieldResults.getText().toString();
         String txtHistory = this.fieldHistory.getText().toString();
+
+        if(txtHistory.isEmpty()){
+            this.fieldResults.append(number);
+        }else if(txtHistory.endsWith("=")){
+            this.fieldResults.setText(number);
+            this.fieldHistory.setText("");
+        }else {
+            if(modeResult || isOperation){
+                this.fieldResults.setText("");
+            }
+            this.fieldResults.append(number);
+        }
         if(txtResults.equals("0")){
             this.fieldResults.setText(number);
-        }else{
-            if(txtHistory.isEmpty()){
-                this.fieldResults.append(number);
-            }else {
-                if (txtHistory.endsWith("=")) {
-                    this.fieldResults.setText(number);
-                    this.fieldHistory.setText("");
-                } else {
-                    if (modeResult || isOperation) {
-                        this.fieldResults.setText("");
-                    }
-                    this.fieldResults.append(number);
-                }
-            }
         }
         modeResult = false;
         isOperation = false;
@@ -124,46 +118,44 @@ public class MainActivity extends AppCompatActivity {
         }
         txtHistory = this.fieldHistory.getText().toString();
         if(txtHistory.contains("+")){
-            this.sum(txtHistory);
+            this.performOperation(txtHistory, "+");
         }else if(txtHistory.contains("x")){
-            this.multiply(txtHistory);
+            this.performOperation(txtHistory, "x");
         }else if(txtHistory.contains("÷")){
-            this.division(txtHistory);
+            this.performOperation(txtHistory, "÷");
         }else if(txtHistory.contains("-")){
-            this.subtract(txtHistory);
+            this.performOperation(txtHistory, "-");
         }
         this.fieldHistory.append("=");
     }
 
-    public void sum(String equation) {
-        String[] numbers = getNumbers(equation, "\\+");
-        if(numbers.length >= 2){
-            Double results = new BigDecimal(numbers[0]).add(new BigDecimal(numbers[1])).doubleValue();
-            this.fieldResults.setText(results.toString());
-        }
-    }
-
-    public void multiply(String equation){
-        String[] numbers = getNumbers(equation, "x");
-        if(numbers.length >= 2){
-            Double results = new BigDecimal(numbers[0]).multiply(new BigDecimal(numbers[1])).doubleValue();
-            this.fieldResults.setText(results.toString());
-        }
-    }
-
-    public void division(String equation){
-        String[] numbers = getNumbers(equation, "÷");
-        if(numbers.length >= 2){
-            Double results = new BigDecimal(numbers[0]).divide(new BigDecimal(numbers[1])).doubleValue();
-            this.fieldResults.setText(results.toString());
-        }
-    }
-
-    public void subtract(String equation){
-        String[] numbers = getNumbers(equation, "-");
-        if(numbers.length >= 2){
-            Double results = new BigDecimal(numbers[0]).subtract(new BigDecimal(numbers[1])).doubleValue();
-            this.fieldResults.setText(results.toString());
+    public void performOperation(String equation, String operation){
+        String[] numbers;
+        Double results;
+        if(operation.equals("+")){
+            numbers = getNumbers(equation, "\\+");
+            if(numbers.length>=2) {
+                results = new BigDecimal(numbers[0]).add(new BigDecimal(numbers[1])).doubleValue();
+                this.fieldResults.setText(results.toString());
+            }
+        }else if(operation.equals("-")){
+            numbers = getNumbers(equation, "-");
+            if(numbers.length>=2) {
+                results = new BigDecimal(numbers[0]).subtract(new BigDecimal(numbers[1])).doubleValue();
+                this.fieldResults.setText(results.toString());
+            }
+        }else if(operation.equals("x")){
+            numbers = getNumbers(equation, "x");
+            if(numbers.length>=2) {
+                results = new BigDecimal(numbers[0]).multiply(new BigDecimal(numbers[1])).doubleValue();
+                this.fieldResults.setText(results.toString());
+            }
+        }else if(operation.equals("÷")){
+            numbers = getNumbers(equation, "÷");
+            if(numbers.length>=2) {
+                results = new BigDecimal(numbers[0]).divide(new BigDecimal(numbers[1])).doubleValue();
+                this.fieldResults.setText(results.toString());
+            }
         }
     }
 
